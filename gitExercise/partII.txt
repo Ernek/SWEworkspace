@@ -1,1 +1,2 @@
 test of git branches
+adding new text to start a conflict
