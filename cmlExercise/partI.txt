@@ -1,0 +1,15 @@
+## Part I 
+
+mkdir first 
+cd first
+touch person.txt
+mv person.txt another.txt
+cp another.txt copy.txt
+rm copy.txt
+
+# Move up one step to work with folders. 
+cd ../.
+
+cp -r first second 
+rm -r second 
+

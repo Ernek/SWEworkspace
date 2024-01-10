@@ -1,0 +1,20 @@
+1. "man" command shows the manual of a given command
+i.e "man ls" will show the manual of the "ls" command. 
+You can scroll down and up using the "j" and "k" keys respectively
+You can get out pressing "q" key
+
+2. the '-l' flag: List files in the long format
+   the '-a' flag: Show all files (Include directory entries whose names begin with a dot)
+
+3. Jump between words in terminal: Option + Arrow
+4. Move cursor to end of line in terminal: Crtl + e
+5. Move cursor to begining of terminal: Crtl + a
+6. Delete a word in terminal: Crtl + w
+7. Terminal is the application or software to run shell commands. 
+   Shell is the programming language to run commands and communicate and execute tasks with the computer
+8. Absolute path: From the root to the current directory. 
+9. Relative path: Part of the path, for example from a folder to another without including the precedent folder tree up to the root
+10. A flag is an option of a command
+	ls -l , ls -a , cp -r 
+11. -r is for recursive, -f to not ask for permission. 
+
