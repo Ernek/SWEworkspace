@@ -1,1 +1,3 @@
 file to start a merge conflict
+test of git branches
+adding new text to start a conflict
