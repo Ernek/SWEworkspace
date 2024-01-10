@@ -1,0 +1,6 @@
+1. git checkout -b BRANCH_NAME
+2. A fast-forward merge can only be done in an intact branch as the other branch was modified. It does not create a new merge commit, while a recursive merge does
+3. git checkout BRANCH_NAME
+4. git branch -d BRANCH_NAME
+5. When there are two files that have been edited from different branches and the latest edits have not been updated on the branch to be merged. Git cannot determine which commits are the ones to keep so one needs to manually resolve them or choose a parth forward.  
+
