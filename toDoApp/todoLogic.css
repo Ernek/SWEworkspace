@@ -1,0 +1,8 @@
+.completed {
+    color: gray;  
+    text-decoration: line-through;
+}
+
+.doneBtn{
+    margin-right:10px;
+}
