@@ -60,10 +60,18 @@ let colorsClicked = 0;
 let colorDuo = [];
 let colorIndexes = [];
 let matchedIndexes = [];
+let pauseCode = true
 // let firstColor = ''
 
 function handleCardClick(event) {
   colorsClicked += 1;
+  if (pauseCode === false){
+    console.log('Print pauseCode true')
+    return
+  }
+  else{
+    console.log('pauseCode is False')
+  }
   if (colorsClicked >= 2) {
     // Index of card
     let indexOfDiv2 = Array.from(event.target.parentNode.children).indexOf(event.target)
@@ -82,7 +90,7 @@ function handleCardClick(event) {
     // change card (element) background color  
     event.target.style.backgroundColor = event.target.className
     // restart colorsClicked 
-    // colorsClicked = 0;
+    colorsClicked = 0;
 
 
     // Populate arrays to compare colors and indexes 
@@ -107,7 +115,11 @@ function handleCardClick(event) {
       let cardElement1 = Array.from(event.target.parentNode.children)[colorIndexes[1]]
       setTimeout(changeColorBack, 1000, cardElement0);
       setTimeout(changeColorBack, 1000, cardElement1);
-      setTimeout(() => {colorsClicked = 0}, 1000);
+      pauseCode = false
+      setTimeout(() => {
+        colorsClicked = 0
+        pauseCode = true
+      }, 1000);
       // setTimeout(changeColorBack1, 2000);
     }
     // emptying colorDuo and colorIndexes 
