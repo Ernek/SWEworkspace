@@ -66,12 +66,12 @@ let pauseCode = true
 function handleCardClick(event) {
   colorsClicked += 1;
   if (pauseCode === false){
-    console.log('Print pauseCode true')
+    console.log('Code is paused')
     return
   }
-  else{
-    console.log('pauseCode is False')
-  }
+  // else{
+    // console.log('Clicking works')
+  // }
   if (colorsClicked >= 2) {
     // Index of card
     let indexOfDiv2 = Array.from(event.target.parentNode.children).indexOf(event.target)
