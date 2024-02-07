@@ -22,7 +22,9 @@ Examples:
 
 */
 function onlyEvenValues(arr){
-    
+    return arr.filter(function(value){
+        return value % 2 === 0;
+    })
 }
 
 /*
@@ -34,7 +36,9 @@ Examples:
 
 */
 function showFirstAndLast(arr){
-    
+    return arr.map(function(value){
+        return `${value[0]}${value[value.length - 1]}`;
+    })
 }
 
 /*
@@ -46,8 +50,11 @@ Examples:
     // [{name: 'Elie', title:'instructor'}, {name: 'Tim', title:'instructor'}, {name: 'Matt', title:'instructor'}, {name: 'Colt', title:'instructor'}]
 
 */
-function addKeyAndValue(arr,key,value){
-    
+function addKeyAndValue(arr, key, value){
+   arr.forEach(function(element){
+    element[key] = value
+   })
+   return arr 
 }
 
 /*
