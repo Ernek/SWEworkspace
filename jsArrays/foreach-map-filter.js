@@ -6,11 +6,14 @@ Examples:
     doubleValues([5,1,2,3,10]) // [10,2,4,6,20]
 
 */
-
+// Using forEach
 function doubleValues(arr){
-    return arr.map(function(value){
-        return value**2
-    })  
+    // Create new array because forEach return nothing
+    let doubledValues = [];
+    arr.forEach(function(value){
+        doubledValues.push(value*2);
+    });
+    return doubledValues;  
 }
 
 /*
@@ -94,7 +97,11 @@ Examples:
     doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
 */
 
-function doubleValuesWithMap(arr) {}
+function doubleValuesWithMap(arr) {
+    return arr.map(function(value){
+        return value * 2;
+    })
+}
 
 /*
 Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.
@@ -105,7 +112,11 @@ Examples:
 */
 
 function valTimesIndex(arr){
-    
+    let result = []
+    arr.forEach(function(value, index){
+        result.push(value*index);
+    })
+    return result
 }
 
 /*
@@ -116,6 +127,13 @@ Examples:
 */
 
 function extractKey(arr, key){
+    let result = [];
+    arr.forEach(function(obj){
+        if (key in obj) {
+            result.push(obj[key]);
+        }
+        })
+    return result
     
 }
 
@@ -127,7 +145,9 @@ Examples:
 */
 
 function extractFullName(arr){
-    
+   return arr.map(function(obj){
+    return obj.first + ' ' + obj.last
+   }) 
 }
 
 /*
@@ -137,7 +157,11 @@ Examples:
     filterByValue([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner') // [{first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Colt', last:"Steele", isCatOwner: true}]
 */
 
-function filterByValue(arr, key) {}
+function filterByValue(arr, key) {
+    return arr.filter(function(obj){
+        return arr[key];
+    })
+}
 
 /*
 Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.
