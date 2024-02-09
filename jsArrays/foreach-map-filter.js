@@ -68,7 +68,22 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+    // make each letter lower case for easy comparison .toLowerCase() method on str. 
+    // array to compare 
+    let vowels = ['a', 'e', 'o' , 'u', 'i']
+    // object with keys: vowels, values: vowelcount
+    let result = {};
+    Array.from(str.toLowerCase()).forEach(function(character){
+        if (vowels.includes(character)) {
+            if (result[character]) {
+                result[character]++;
+            }
+            else{
+                result[character] = 1;
+            } 
+        }
+   })
+   return result
 }
 
 /*
