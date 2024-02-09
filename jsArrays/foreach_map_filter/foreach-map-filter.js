@@ -159,7 +159,7 @@ Examples:
 
 function filterByValue(arr, key) {
     return arr.filter(function(obj){
-        return arr[key] !== undefined;
+        return obj[key] !== undefined;
     })
 }
 
@@ -190,8 +190,8 @@ Examples:
 
 function findInObj(arr, key, searchValue) {
     return arr.filter(function(obj){
-        obj[key] === searchValue
-    })[0]
+        return obj[key] === searchValue;
+    })[0];
 }
 
 /*
