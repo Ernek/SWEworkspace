@@ -1,0 +1,20 @@
+
+- What is the difference between var and let?
+
+ var -> has global scope, can be reassigned and redeclared
+ let -> has block scope, can be reassigned but not redecleared 
+
+
+- What is the difference between var and const?
+ var -> has global scope, can be reassigned and redeclared
+ const -> has block scope, cannot be reassigned or redecleared
+
+- What is the difference between let and const?
+ let -> has block scope, can be reassigned but not redecleared 
+ const -> has block scope, cannot be reassigned or redecleared
+
+- What is hoisting?
+ When you use 'var' to declare a variable after you have used it in the code logic, the variable will be assigned to 'undefined' instead of throwing an error of usage before declaration. This is because 'var' variables are global and compiled before the code logic even runs.
+ 
+
+
