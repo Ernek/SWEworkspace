@@ -1,0 +1,110 @@
+// Example 1
+
+function filterOutOdds(...nums) {
+  return nums.filter(function(num) {
+    return num % 2 == 0
+  });
+}
+
+
+// Find min 
+
+function findMin(...nums){
+  return Math.min(...nums)
+}
+
+// Another way
+
+function findMin(...nums) {
+    return nums.reduce(function(min, val) {
+        return min < val ? min : val
+    })
+}
+
+// mergeObjects 
+
+function mergeObjects(obj1, obj2){
+  return {...obj1, ...obj2}
+}
+
+
+// doubleAndReturnArgs
+
+function doubleAndReturnArgs(inputArray, ...args){
+    let doubledarray = args.map(function(val){
+        return val*2
+    })
+    return [...inputArray, ...doubledarray]
+}
+
+
+// Slice and Dice!
+/** remove a random element in the items array
+and return a new array without that item. */
+
+// Using splice, if items is an array we can splice it in place 
+function removeRandom(items) {
+ randomIndex = Math.floor(Math.random() * items.length);
+ items.splice(randomIndex,1);
+ return items
+}
+
+const removeRandom = items => {
+  let index = Math.floor(Math.random() * items.length)
+  return [...items.slice(0,index), ...items.slice(index + 1)];
+}
+
+
+
+
+
+/** Return a new array with every item in array1 and array2. */
+
+function extend(array1, array2) {
+  return [...array1, ...array2]
+}
+
+const extend = (array1, array2) => {
+ return [...array1, ...array2]
+}
+
+
+/** Return a new object with all the keys and values
+from obj and a new key/value pair */
+
+function addKeyVal(obj, key, val) {
+  return {...obj, [key]: val}
+}
+
+
+/** Return a new object with a key removed. */
+
+// If you can modify the original object
+function removeKey(obj, key) {
+  delete obj[key] 
+  return obj
+}
+
+// If you cannot modify it
+
+const removeKey = (obj, key) => {
+  let newObj = { ...obj }
+  delete newObj[key]
+  return newObj;
+}
+
+/** Combine two objects and return a new object. */
+
+const combine = (obj1, obj2) => {
+  return { ...obj1, ...obj2 };
+}
+
+/** Return a new object with a modified key and value. */
+
+const update = (obj, key, val) => {
+  let newObj = { ...obj }
+  newObj[key] = val;
+  return newObj;
+}
+
+
