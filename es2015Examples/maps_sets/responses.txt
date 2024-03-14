@@ -1,0 +1,19 @@
+What does the following code return?
+new Set([1,1,2,2,3,4])
+
+Returns a set: {1, 2, 3, 4}
+
+What does the following code return?
+[...new Set("referee")].join("")
+
+Returns 'ref' because they are the unique values 
+
+What does the Map m look like after running the following code?
+let m = new Map();
+m.set([1,2,3], true);
+m.set([1,2,3], false)
+
+Response: m Map will have 2 elements since Map keys are ordered elements,
+            the two arrays will be different elements of the Map
+
+            
