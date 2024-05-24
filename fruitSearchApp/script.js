@@ -20,7 +20,6 @@ function search(str) {
 
 function searchHandler(e) {
 	suggestions.innerHTML = "";
-	// console.log(input.value)
 	if (input.value != ""){
 		search(input.value)
 	}
@@ -43,15 +42,10 @@ function useSuggestion(e) {
 	input.value = e.target.textContent
 	suggestions.innerHTML = ""
 	search(input.value)
-
-	// TODO
 }
-// Add event listener in mouseover on list elements 
-// console.log(listedSuggestions.outerHTML)
 
 input.addEventListener('keyup', searchHandler);
 suggestions.addEventListener('click', useSuggestion);
-// Adding event listener to the parent ul element of the li 
 listedSuggestions.addEventListener('mouseover',function(e){
 		// console.log(e.target);
 		e.target.style.fontWeight = 'bold'
