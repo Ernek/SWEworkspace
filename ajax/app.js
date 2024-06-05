@@ -3,7 +3,8 @@
 // async function getGyph(word) {
 //     var wordArray = word.trim().split(/\s+/);
 //     var wordSearch = wordArray.join("+")
-//     const apiTerm = `https://api.giphy.com/v1/gifs/search?q=${wordSearch}&api_key=Rzldmovw8tSsri3HETXnbA0q7ZizFr4V&limit=1`
+//     var key = "put_key"
+//     const apiTerm = `https://api.giphy.com/v1/gifs/search?q=${wordSearch}&api_key=${key}V&limit=1`
 //     // console.log(apiTerm)
 //     const res = await axios.get(apiTerm)
     // for (let giph of res.data.data){
@@ -38,7 +39,7 @@ $("form").on("submit", async function(evt) {
   let wordArray = searchTerm.trim().split(/\s+/);
   let wordSearch = wordArray.join("+")
   // limit 5, api key 
-  const apiTerm = `https://api.giphy.com/v1/gifs/search?q=${wordSearch}&api_key=Rzldmovw8tSsri3HETXnbA0q7ZizFr4V&limit=5`
+  const apiTerm = `https://api.giphy.com/v1/gifs/search?q=${wordSearch}&api_key=${key}&limit=5`
 
   $searchInput.val("");
 
