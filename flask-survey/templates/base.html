@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+</head>
+<body>
+    <h1> Question {{ new_index }} </h1>
+    <br>
+    <form name="question" id="{{ current_index }}" method="POST">
+        <p> {{ question }} </p>
+        <div>
+        {% for choice in choices %}
+        <input type = "radio" name = "choice" value = "{{ choice }}"> {{ choice }} </input>
+        {% endfor %}
+        </div>
+        <br>
+        <div>
+            <button type="submit"> Submit </button>
+        </div>
+    </form>
+    <!-- <br>
+    <form action="{{ new_index }}">
+        <button> Next Question </button>
+    </form> -->
+    
+</body>
+</html>
