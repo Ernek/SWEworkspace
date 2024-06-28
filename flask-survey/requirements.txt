@@ -1,0 +1,10 @@
+autopep8
+blinker
+Click
+Flask
+Flask-DebugToolbar
+itsdangerous
+Jinja2
+MarkupSafe
+pycodestyle
+Werkzeug
