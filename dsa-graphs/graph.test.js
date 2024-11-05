@@ -90,6 +90,9 @@ describe("removeVertex", function() {
     graph.removeVertex(c);
     graph.removeVertex(d);
 
+    expect(a.adjacent.has(c)).toBeFalsy()
+    expect(b.adjacent.has(d)).toBeFalsy()
+
     expect(graph.nodes.has(a)).toBeTruthy();
     expect(graph.nodes.has(b)).toBeTruthy();
     expect(graph.nodes.has(c)).toBeFalsy();
